@@ -16,7 +16,7 @@
   }
   
   .sidebar-logo {
-    height: 40px;
+    height: 6em;
     width: auto;
   }
   
@@ -34,7 +34,7 @@
     transition: all 0.3s ease;
   }
   
-  .sidebar-nav li.active {
+  .sidebar-nav li:hover {
     background: linear-gradient(45deg, #ff7e5f, #feb47b);
   }
   
@@ -50,6 +50,14 @@
     background: white;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   }
+
+  .user-avatar{
+    height: 50px;
+    width: auto;
+    border-radius: 15px;
+    margin-right: 1rem;
+  }
+
   
   .dashboard-content {
     padding: 2rem;
@@ -63,6 +71,30 @@
   
   .stat-card {
     background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  .diet-tags {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+  }
+  
+  .diet-tag {
+    background-color: #fff3e0;
+    color: #f57c00;
+    padding: 0.25rem 0.75rem;
+    border-radius: 1rem;
+    font-size: 1rem;
+  }
+
+
+  .projects-card{
+    background: white;
+    width: 100%;
     padding: 1.5rem;
     border-radius: 12px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);

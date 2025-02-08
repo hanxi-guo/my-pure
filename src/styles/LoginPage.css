@@ -200,6 +200,10 @@
     font-size: 1.2rem;
     margin: 1rem 0;
   }
+
+h1{
+    color: linear-gradient(45deg,#104F8D, #107C6B, #7FA362); 
+  }
   
   .quick-stats {
     display: grid;

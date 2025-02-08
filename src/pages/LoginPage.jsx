@@ -11,7 +11,7 @@ const LoginPage = () => {
 
   useEffect(() => {
     if (isAuthenticated) {
-      navigate('/dashboard');  // or '/dashboard' 
+      navigate('/dashboard');  // or '/dashboard'  onboarding
     }
   }, [isAuthenticated, navigate]);
 
@@ -33,7 +33,7 @@ const LoginPage = () => {
           <img src="/logo.PNG" alt="Logo" className="large-logo" />
         </div>
         <div className="intro-text">
-          <h1 className="gradient-title">PurePlate</h1>
+          <h3 className="gradient-title">PurePlate</h3>
           <h2 className="subtitle">Welcome to your Personal AI-Powered Meal Planner!</h2>
           <p className="hero-description">
           We're thrilled to have you here! Get ready for stress-free, budget-friendly, and delicious meal planning tailored just for you. 
@@ -53,17 +53,17 @@ const LoginPage = () => {
             <div className="features-grid">
               <div className="feature-card">
                 <div className="feature-icon">🚀</div>
-                <h3>AI-Powered Meal Planning </h3>
+                <h1>AI-Powered Meal Planning </h1>
                 <p>Say goodbye to decision fatigue! Our smart AI curates personalized meal plans tailored to your taste, budget, and lifestyle.</p>
               </div>
               <div className="feature-card">
                 <div className="feature-icon">💰 </div>
-                <h3>Budget-Friendly Choices </h3>
+                <h1>Budget-Friendly Choices </h1>
                 <p>Stay in control of your spending with optimized meal plans that make every dollar count.</p>
               </div>
               <div className="feature-card">
                 <div className="feature-icon">⚡</div>
-                <h3>Seamless & Easy to Use</h3>
+                <h1>Seamless & Easy to Use</h1>
                 <p>ign up in seconds, customize your preferences, and let our AI do the rest—effortless meal planning at your fingertips.</p>
               </div>
             </div>
