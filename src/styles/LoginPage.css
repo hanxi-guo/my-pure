@@ -28,19 +28,47 @@
     padding: 2rem;
   }
   
-  .intro-card {
-    font-size: 1.5rem;
+    .intro-card {
+    margin-top: 3rem;
     background: transparent;
     backdrop-filter: blur(10px);
     border-radius: 20px;
     padding: 3rem 4rem;
-    max-width: 800px;
+    max-width: 1000px;
     width: 100%;
     text-align: center;
     border: 1px solid rgba(255, 255, 255, 0.1);
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-    -webkit-text-fill-color: black;
   }
+  
+  .intro-content {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  
+  .intro-logo {
+    flex: 0 0 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+.large-logo {
+    width: 100%;
+    height: auto;
+    max-width: 300px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .intro-text {
+    flex: 1;
+  }
+  
   
   .left-content {
     flex: 1;
@@ -52,7 +80,6 @@
   
   .hero-description {
     font-size: 1.2rem;
-    text-emphasis-color: linear-gradient(45deg,#104F8D, #107C6B, #7FA362);;
     color: green;
     margin: 1.5rem 0;
     line-height: 1.6;
@@ -84,9 +111,20 @@
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
   }
 
-  .login-button{
-    background-color: linear-gradient(45deg,#104F8D, #107C6B, #7FA362);;
-  }
+  .login-button {
+    background: linear-gradient(45deg, #104F8D, #107C6B, #7FA362);
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+    .login-button:hover {
+        transform: scale(1.1);
+    }
   
   .features-grid {
     display: grid;
@@ -131,7 +169,10 @@
     border-radius: 15px;
     color: linear-gradient(45deg,#104F8D, #107C6B, #7FA362); 
   }
-  
+
+  .testimonial-card:hover {
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+}
   .testimonial-author {
     margin-top: 1rem;
     font-style: italic;
@@ -146,15 +187,16 @@
   }
   
   .welcome-section {
-    background: rgba(0, 0, 0, 0.7);
+    background:transparent;
     padding: 2rem;
     border-radius: 15px;
     backdrop-filter: blur(10px);
     text-align: center;
+    margin-top: 3rem;
   }
   
   .welcome-message {
-    color: white;
+    color: black;
     font-size: 1.2rem;
     margin: 1rem 0;
   }
@@ -170,7 +212,7 @@
     background: rgba(255, 255, 255, 0.1);
     padding: 1.5rem;
     border-radius: 10px;
-    color: white;
+    color: black;
   }
   
   @media screen and (max-width: 768px) {

@@ -1,27 +1,44 @@
 import React from 'react';
+import { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { useAuth0 } from '@auth0/auth0-react';
 import '../styles/LoginPage.css';
 import Navbar from '../components/Navbar';
 
 const LoginPage = () => {
+    const navigate = useNavigate();
   const { loginWithRedirect, isAuthenticated, logout, user } = useAuth0();
+
+  useEffect(() => {
+    if (isAuthenticated) {
+      navigate('/dashboard');
+    }
+  }, [isAuthenticated, navigate]);
+
 
   return (
     <div className="login-page">
       <Navbar />
       <div className="animate-background"></div>
       
-      {!isAuthenticated ? (
+      
         <div className="landing-content">
           {/* Hero Section */}
           <div className="hero-section">
     <div className="intro-card">
-      <h1 className="gradient-title">PurePlate</h1>
-      <h2 className="subtitle">Welcome to your Personal AI-Powered Meal Planner! 🍽️✨</h2>
-      <p className="hero-description">
-      We’re thrilled to have you here! Get ready for stress-free, budget-friendly, and delicious meal planning tailored just for you. 
-      Whether you're looking to save time, eat healthier, or stick to a budget, we've got you covered.
-      </p>
+      <div className="intro-content">
+        <div className="intro-logo">
+          <img src="/logo.PNG" alt="Logo" className="large-logo" />
+        </div>
+        <div className="intro-text">
+          <h1 className="gradient-title">PurePlate</h1>
+          <h2 className="subtitle">Welcome to your Personal AI-Powered Meal Planner!</h2>
+          <p className="hero-description">
+          We're thrilled to have you here! Get ready for stress-free, budget-friendly, and delicious meal planning tailored just for you. 
+          Whether you're looking to save time, eat healthier, or stick to a budget, we've got you covered.
+          </p>
+        </div>
+      </div>
       <button className="login-button" onClick={() => loginWithRedirect()}>
         Get Started
       </button>
@@ -66,30 +83,6 @@ const LoginPage = () => {
             </div>
           </div>
         </div>
-      ) : (
-        <div className="dashboard-preview">
-          <div className="welcome-section">
-            <h1 className="gradient-title">Welcome back, {user?.name}!</h1>
-            <p className="welcome-message">We're glad to see you again.</p>
-            <div className="quick-stats">
-              <div className="stat-card">
-                <h3>Recent Activity</h3>
-                <p>You have 3 pending tasks</p>
-              </div>
-              <div className="stat-card">
-                <h3>Upcoming</h3>
-                <p>2 meetings scheduled today</p>
-              </div>
-            </div>
-            <button 
-              className="login-button"
-              onClick={() => logout({ returnTo: window.location.origin })}
-            >
-              Log Out
-            </button>
-          </div>
-        </div>
-      )}
     </div>
   );
 };
