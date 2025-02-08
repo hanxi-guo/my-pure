@@ -11,9 +11,11 @@ const LoginPage = () => {
 
   useEffect(() => {
     if (isAuthenticated) {
-      navigate('/dashboard');
+      navigate('/dashboard');  // or '/dashboard' 
     }
   }, [isAuthenticated, navigate]);
+
+
 
 
   return (

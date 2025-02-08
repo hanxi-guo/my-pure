@@ -7,7 +7,6 @@ const DashboardPage = () => {
 
   return (
     <div className="dashboard-layout">
-      {/* 侧边栏导航 */}
       <aside className="dashboard-sidebar">
         <div className="sidebar-header">
           <img src="/logo.PNG" alt="Logo" className="sidebar-logo" />
@@ -23,9 +22,7 @@ const DashboardPage = () => {
         </nav>
       </aside>
 
-      {/* 主要内容区域 */}
       <main className="dashboard-main">
-        {/* 顶部导航栏 */}
         <header className="dashboard-header">
           <div className="header-search">
             <input type="search" placeholder="Search..." />
@@ -39,10 +36,8 @@ const DashboardPage = () => {
           </div>
         </header>
 
-        {/* 仪表板内容 */}
         <div className="dashboard-content">
           <div className="dashboard-grid">
-            {/* 统计卡片 */}
             <div className="stat-card">
               <h3>Total Projects</h3>
               <p className="stat-number">12</p>
@@ -59,7 +54,6 @@ const DashboardPage = () => {
               <p className="stat-trend positive">↑ 42%</p>
             </div>
 
-            {/* 活动列表 */}
             <div className="activity-card">
               <h3>Recent Activity</h3>
               <ul className="activity-list">
@@ -71,15 +65,12 @@ const DashboardPage = () => {
                   <span className="activity-time">5h ago</span>
                   <span className="activity-text">Updated Task Status</span>
                 </li>
-                {/* 更多活动项目 */}
               </ul>
             </div>
 
-            {/* 项目进度 */}
             <div className="projects-card">
               <h3>Project Progress</h3>
               <div className="project-list">
-                {/* 项目进度条 */}
               </div>
             </div>
           </div>
